@@ -1,10 +1,10 @@
 import { useLoaderData } from 'react-router-dom';
-import { Person } from '../schemas/person.ts';
+import { Example1LoaderData } from '../loaders/example1-loader.ts';
 
 export default function Example1() {
   const {
     person: { id, name, age },
-  } = useLoaderData() as { person: Person };
+  } = useLoaderData() as Example1LoaderData;
 
   return (
     <div>
