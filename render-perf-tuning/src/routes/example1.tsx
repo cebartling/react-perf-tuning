@@ -1,26 +1,14 @@
 import { useLoaderData } from 'react-router-dom';
 import { Example1LoaderData } from '../loaders/example1-loader.ts';
+import { DemographicsCard, EducationCard, Page } from '../components';
 
 export default function Example1() {
-  const {
-    person: { id, name, age },
-  } = useLoaderData() as Example1LoaderData;
+  const { person } = useLoaderData() as Example1LoaderData;
 
   return (
-    <div>
-      <h1>Contact Form</h1>
-      <form>
-        <input type="hidden" name="id" value={id} />
-        <label>
-          Name:
-          <input type="text" name="name" value={name} />
-        </label>
-        <label>
-          Age:
-          <input type="number" name="age" value={age} />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <Page>
+      <DemographicsCard person={person} key={person.id} />
+      <EducationCard person={person} key={person.id} />
+    </Page>
   );
 }
