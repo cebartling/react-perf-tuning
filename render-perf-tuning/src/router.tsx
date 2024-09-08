@@ -1,8 +1,8 @@
 import { createBrowserRouter } from 'react-router-dom';
-import Example1 from './routes/example1.tsx';
-import ErrorPage from './pages/error-page.tsx';
-import Root from './routes/root.tsx';
-import { example1Loader } from './loaders/example1-loader.ts';
+import { ErrorPage } from './pages';
+import { example1Loader } from './loaders';
+import { example1Action } from './actions';
+import { Example1, Root } from './routes';
 
 export const router = createBrowserRouter([
   {
@@ -14,6 +14,7 @@ export const router = createBrowserRouter([
     path: '/example1',
     element: <Example1 />,
     loader: example1Loader,
+    action: example1Action,
     errorElement: <ErrorPage />,
   },
 ]);
