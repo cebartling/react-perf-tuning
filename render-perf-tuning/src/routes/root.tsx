@@ -1,7 +1,15 @@
+import { Page, Title } from '../components';
+import { Link } from 'react-router-dom';
+
 export function Root() {
   return (
-    <div>
-      <h1>Root</h1>
-    </div>
+    <Page>
+      <Title>Root</Title>
+      <ul>
+        <li>
+          <Link to="/example1">Example 1</Link>
+        </li>
+      </ul>
+    </Page>
   );
 }
