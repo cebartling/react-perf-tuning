@@ -3,7 +3,7 @@ import { Section, Subsection, SubsectionDetails, SubsectionTitle, Title, Toolbar
 import React from 'react';
 import { EducationEditor } from './education-editor.tsx';
 
-export const EducationCard = ({ person }: { person: Person }) => {
+function EducationCard({ person }: { person: Person }) {
   const [isEditorOpen, setIsEditorOpen] = React.useState(false);
 
   function handleOnClickAddButton(event: React.MouseEvent<HTMLButtonElement>) {
@@ -30,4 +30,8 @@ export const EducationCard = ({ person }: { person: Person }) => {
         })}
     </Section>
   );
-};
+}
+
+EducationCard.whyDidYouRender = true;
+
+export { EducationCard };

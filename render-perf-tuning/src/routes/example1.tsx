@@ -2,7 +2,7 @@ import { Form, useLoaderData } from 'react-router-dom';
 import { Example1LoaderData } from '../loaders';
 import { DemographicsCard, EducationCard, Page } from '../components';
 
-export function Example1() {
+function Example1() {
   const { person } = useLoaderData() as Example1LoaderData;
 
   return (
@@ -14,3 +14,7 @@ export function Example1() {
     </Form>
   );
 }
+
+Example1.whyDidYouRender = true;
+
+export { Example1 };

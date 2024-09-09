@@ -1,6 +1,6 @@
 import { FormLabel, FormPanel, FormRow, HiddenInput, StyledButton, StyledInput } from '../forms';
 
-export const EducationEditor = () => {
+function EducationEditor() {
   return (
     <FormPanel>
       <HiddenInput id="intent" name="intent" value="education" />
@@ -25,4 +25,8 @@ export const EducationEditor = () => {
       </FormRow>
     </FormPanel>
   );
-};
+}
+
+EducationEditor.whyDidYouRender = true;
+
+export { EducationEditor };
