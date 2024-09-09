@@ -6,11 +6,11 @@ export function Example1() {
   const { person } = useLoaderData() as Example1LoaderData;
 
   return (
-    <Page>
-      <Form method="post" action="/example1">
-        <DemographicsCard person={person} key={person.id} />
-        <EducationCard person={person} key={person.id} />
-      </Form>
-    </Page>
+    <Form method="post" action="/example1">
+      <Page>
+        <DemographicsCard person={person} key={`demographics-${person.id}`} />
+        <EducationCard person={person} key={`education-${person.id}`} />
+      </Page>
+    </Form>
   );
 }

@@ -7,11 +7,12 @@ const ToolbarContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 10px;
-  background-color: #f3f3f3;
+  background-color: transparent;
+  width: 100%;
 `;
 
 const ToolbarButton = styled.button`
-  background-color: #4caf50;
+  background-color: #00158a;
   border: none;
   color: white;
   padding: 10px 20px;
@@ -25,12 +26,14 @@ const ToolbarButton = styled.button`
 
 export const Toolbar = ({
   handleOnClickAddButton,
+  disabled,
 }: {
   handleOnClickAddButton: (event: React.MouseEvent<HTMLButtonElement>) => void;
+  disabled: boolean;
 }) => {
   return (
     <ToolbarContainer role="toolbar">
-      <ToolbarButton role="button" onClick={handleOnClickAddButton}>
+      <ToolbarButton role="button" onClick={handleOnClickAddButton} disabled={disabled}>
         <FiPlus />
       </ToolbarButton>
     </ToolbarContainer>
