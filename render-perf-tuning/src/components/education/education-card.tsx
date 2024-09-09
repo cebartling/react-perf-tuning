@@ -14,7 +14,7 @@ export const EducationCard = ({ person }: { person: Person }) => {
   return (
     <Section role="contentinfo">
       <Title role="heading">Education</Title>
-      <Toolbar handleOnClickAddButton={handleOnClickAddButton} disabled={isEditorOpen} />
+      {!isEditorOpen && <Toolbar handleOnClickAddButton={handleOnClickAddButton} disabled={isEditorOpen} />}
       {isEditorOpen && <EducationEditor />}
       {person.education &&
         person.education.map((education) => {
