@@ -6,8 +6,8 @@ import { CertificationSchema } from './certification.ts';
 export const PersonSchema = z.object({
   id: z.string(),
   version: z.number().gte(1),
-  first_name: z.string(),
-  last_name: z.string(),
+  firstName: z.string(),
+  lastName: z.string(),
   age: z.number(),
   education: z.array(EducationSchema).optional(),
   experience: z.array(ExperienceSchema).optional(),

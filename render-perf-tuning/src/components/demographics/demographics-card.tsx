@@ -5,7 +5,7 @@ export const DemographicsCard = ({ person }: { person: Person }) => {
   return (
     <Section role="contentinfo">
       <Title role="heading">
-        {person.first_name} {person.last_name}
+        {person.firstName} {person.lastName}
       </Title>
     </Section>
   );
